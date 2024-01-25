@@ -1,0 +1,12 @@
+[submodule "frameworks/ABY"]
+	path = frameworks/ABY
+	url = git@github.com:robinhundt/ABY.git
+[submodule "frameworks/MOTION"]
+	path = frameworks/MOTION
+	url = git@github.com:robinhundt/MOTION.git
+[submodule "frameworks/MP-SPDZ"]
+	path = frameworks/MP-SPDZ
+	url = git@github.com:robinhundt/MP-SPDZ.git
+[submodule "frameworks/SEEC"]
+	path = frameworks/SEEC
+	url = ssh://git@github.com/encryptogroup/SEEC.git

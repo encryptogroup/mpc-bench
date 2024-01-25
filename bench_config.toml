@@ -1,0 +1,37 @@
+#net_settings = ["RESET", "LAN", "WAN"]
+#repeat = 5
+
+[[bench]]
+framework = "SEEC"
+target = "bristol"
+tag = "seec_aes_ctr_no_setup"
+compile_flags = ["../../../../../circuits/advanced/aes_128.bristol"]
+flags = ["--insecure-setup"]
+#cores = [0,1]
+[bench.compile_args]
+--simd = ["1",]
+
+
+[[bench]]
+framework = "MOTION"
+tag = "motion_aes_no_setup"
+target = "aes128"
+flags = ["--insecure-setup"]
+#cores = [0,1]
+[bench.args]
+--num-simd = ["1"]
+
+[[bench]]
+framework = "ABY"
+tag = "aby_aes_setup"
+target = "bristol"
+flags = ["-c", "../../bin/circ/aes_128.aby", "-d", "256"]
+[bench.args]
+-n = ["1",]
+
+ [[bench]]
+ framework = "MP-SPDZ"
+ tag = "mp_spdz_aes_no_setup"
+ target = "aes_circuit"
+ compile_flags = ["1"]
+ flags = ["-F"]

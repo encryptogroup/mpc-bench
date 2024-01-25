@@ -1,0 +1,19 @@
+# Jump host to use for the ssh connections
+jump = "JUMP_HOST"
+# IP:PORT of the server (id = 0) in the MPC, must be reachable from the client at this address
+server = "IP:PORT"
+# IP:PORT of the client (id = 1) in the MPC
+client = "IP:PORT"
+# path on the remote hosts where mpc-bench directory is rsynced to
+remote_path = "/where/to/clone"
+# ssh destination of the server and client
+remote_hosts = ["user@server1.domain", "user@server2.domain"]
+# directory of locally build heaptack main branch https://github.com/KDE/heaptrack
+# as MPC-bench requires changes not present in published packages
+heaptrack_dir = "/dir/to/heaptrack/"
+# command to enable the lan setting emulation
+lan_cmd = "sudo tc_lan10"
+# command to enable the wan emulation
+wan_cmd = "sudo tc_wan"
+# command to reset the emulation
+reset_net_cmd = "sudo tc_off"
